@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    password: admin
+    url: jdbc:mysql://192.168.100.23:3306/test?useUnicode=yes&characterEncoding=UTF-8&serverTimezone=CET
+#    url: jdbc:mysql://localhost:3306/test?useUnicode=yes&characterEncoding=UTF-8
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL55Dialect
+        jdbc:
+          time_zone: CET
+
+  devtools:
+    restart:
+      poll-interval: 2s
+      quiet-period: 1s
+      #      "[hibernate.generate_statistics]": true
+
+
